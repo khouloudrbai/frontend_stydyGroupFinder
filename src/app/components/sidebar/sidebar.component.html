@@ -1,0 +1,71 @@
+<!--Main Navigation-->
+<header>
+    <!-- Sidebar -->
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white" >
+      <div class="position-sticky">
+        <div class="list-group list-group-flush mx-3 mt-4">
+          <!-- Collapse 1 -->
+          <a
+            class="list-group-item list-group-item-action py-2 ripple"
+            aria-current="true"
+            data-mdb-collapse-init
+            aria-expanded="true"
+            aria-controls="collapseExample1"
+          >
+            <i class="fas fa-tachometer-alt fa-fw me-3"></i><a (click)="acceuil()">Dashboard</a>
+          </a>
+         
+          <a
+            class="list-group-item list-group-item-action py-2 ripple"
+            aria-current="true"
+            data-mdb-collapse-init
+            aria-expanded="true"
+            aria-controls="collapseExample2"
+            
+          >
+            <i class="fas fa-chart-area fa-fw me-3"></i><a (click)="courses()">Courses</a>
+          </a>
+        
+          <!-- Collapse 2 -->
+        </div>
+      </div>
+    </nav>
+    <!-- Sidebar -->
+  
+    <!-- Navbar -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg  navbar-light bg-dark fixed-top">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+       
+              <a class="navbar-brand " style="color: white;"(click)="acceuil()">StudyPartner </a>
+      
+
+<div class="input-group " style="width:250px; margin-right:700px ;">
+  <input type="search" class="form-control " placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+  <span class="input-group-text border-0" id="search-addon">
+    <i class="fas fa-search"></i>
+  </span>
+</div>
+            <div class="dropdown mr-4">
+
+                <img 
+                  *ngIf="photoUrl" [src]="photoUrl"
+                  class="dropdown-toggle rounded-circle img-fluid " 
+                  type="button" 
+                  id="dropdownMenuButton" 
+                  data-bs-toggle="dropdown" 
+                  aria-haspopup="true" 
+                  aria-expanded="false" 
+                  style="width: 35px; cursor: pointer;"
+                />
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item " (click)="profile()">Profile</a>
+                  <a class="dropdown-item " (click)="logout()">Deconnexion</a>
+                </div>
+              </div>
+            </div>
+
+          </nav>
+
+  </header>
+
